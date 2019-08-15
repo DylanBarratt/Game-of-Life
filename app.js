@@ -1,7 +1,7 @@
 //Created by Dylan Barratt
 //Visit dylanbarratt.com or github.com/dylanbarratt
 
-var tileWidth, autoPlayBtn, playing;
+var tileWidth, autoPlayBtn, playing, fSlider;
 
 function setup() {
 	tileWidth = 5;
@@ -21,6 +21,9 @@ function setup() {
 	title = createP("CONWAY'S GAME OF LIFE by");
 	title.position(document.documentElement.clientWidth / 2 - width / 2, document.documentElement.clientHeight / 2 - height / 2 - 50);
 
+	createP("Speed: ");
+	fSlider = createSlider(3, 20, 3, 1);
+
 	drawGrid();
 	background(0);
 
@@ -31,6 +34,7 @@ function setup() {
 var grid, generation, xLength, yLength;
 
 function draw() {
+	frameRate(fSlider.value);
 	drawGrid();
 }
 
@@ -40,7 +44,6 @@ function createGrid(rowsX, colsY) {
 	xLength = 0;
 	yLength = 0;
 
-	generation += 1;
 	for (y = 0; y < colsY; y++) {
 		yLength += 1;
 		for (x = 0; x < rowsX; x++) {
@@ -86,6 +89,8 @@ function checkSurrondingTiles(index) {
 	x = grid[index][0];
 	y = grid[index][1];
 	currentStatus = grid[index][3];
+
+	generation += 1;
 
 	//GETTING A NEIGHBOURSCORE
 	//TOP LEFT
@@ -137,13 +142,14 @@ function checkSurrondingTiles(index) {
 	}
 
 	//APPLYING RULES DEPEPENDENT ON NEIGHBOUR SCORE
-	if (neighbourScore < 2 && currentStatus == 1) {
+	if (neighbourScore == 2 || (neighbourScore == 3 && currentStatus == 1)) {
+		//NOTHING HAPPENS
+	} else if (neighbourScore < 2 && currentStatus == 1) {
 		grid[index][3] = 0; //RULE 1
 	} else if (neighbourScore > 3 && currentStatus == 1) {
 		grid[index][3] = 0; //RULE 3
 	} else if (neighbourScore == 3 && currentStatus == 0) {
 		grid[index][3] = 1; //RULE 4
-	} else {
 	}
 }
 
