@@ -17,4 +17,4 @@ I wanted to challenge myself with this cellular automaton project based on the c
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-To see it in action  <a href="dylanbarratt.com/projects/cgol">click here</a>
+To see it in action  <a href="www.dylanbarratt.com/projects/cgol">click here</a>
