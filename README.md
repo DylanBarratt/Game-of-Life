@@ -17,4 +17,4 @@ I wanted to challenge myself with this cellular automaton project based on the c
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-To see it in action  <a href="http://www.dylanbarratt.com/projects/cgol">click here</a>
+To see it in action  <a href="https://dylanbarratt.com/projects/Conway's%20Game%20of%20Life/index.html">click here</a>
