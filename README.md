@@ -19,4 +19,4 @@ I wanted to challenge myself with this cellular automaton project based on the c
 
 To see it in action  <a href="http://dylanbarratt.com/projects/conway/">click here</a>
 
-_Side Note: I don't think it actually works properly lol!_
+_2021 Side Note: I don't think it actually works properly lol!_
