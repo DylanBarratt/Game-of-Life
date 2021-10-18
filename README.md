@@ -6,16 +6,7 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-
-## 🧐 About <a name = "about"></a>
-
 I wanted to challenge myself with this cellular automaton project based on the conway's game of life ruleset. I think it behaves as it should, but if not please let me now!
-
-## 🏁 Getting Started <a name = "getting_started"></a>
 
 To see it in action  <a href="http://dylanbarratt.com/projects/conway/">click here</a>
 
